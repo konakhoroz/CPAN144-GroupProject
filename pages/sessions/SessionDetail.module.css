@@ -1,0 +1,31 @@
+/* SessionDetail.module.css */
+.detailsContainer {
+    padding: 5px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+  }
+
+  .sessionTitle {
+    
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 2px;
+        background: none; /* No background around the title */
+        padding: 10px;
+    
+
+  }
+  
+  .duration {
+    font-weight: bold;
+    color: #007bff; /* Blue color for emphasis */
+    font-size: 1.2em;
+  }
+  
+  .notes {
+    font-size: 1.1em;
+    color: #000000; /* Black color for notes */
+  }
+  

@@ -1,0 +1,36 @@
+.session-card {
+    background-color: #ffe6f7; /* Light Pink */
+    border: 2px solid #f1c6c6; /* Soft pink border */
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .session-card.selected {
+    background-color: #ffb3cc; /* Light Pink Highlight when selected */
+  }
+  
+  .session-card h3 {
+    color: #7e2020; /* Dark Pink */
+  }
+  
+  .session-card p {
+    color: #4a90e2; /* Blue for details */
+  }
+  
+  .session-card button {
+    padding: 8px 15px;
+    background-color: #f1c6c6;
+    border: 1px solid #f1c6c6;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .session-card button:hover {
+    background-color: #7e2020;
+    color: white;
+  }
+  
+  

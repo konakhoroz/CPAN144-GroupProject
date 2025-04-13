@@ -1,40 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+**Project Title: Study Buddy**
+# Project Description:
+This is a React-based web application that allows users to track their study sessions and goals. Users can add, edit, delete, and view sessions and goals. The application has a responsive layout for both mobile and desktop, and clean, modular components to ensure a smooth user experience.
 
-## Getting Started
+# Technologies Used:
+React
 
-First, run the development server:
+Next.js
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+CSS Modules
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+JavaScript (ES6+)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+# File Structure:
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+/components
+  - Navbar.js
+  - Footer.js
+  - SessionCard.js
+  - GoalCard.js
+  - GoalCard.module.css
+  - SessionCard.module.css
+  - SessionForm.js
+  - GoalForm.js
+/pages
+  - index.js
+  - sessions/[id].js
+  - goals/[id].js
+  - sessions/index.js
+  - goals/index.js
+  - goals/GoalDetail.module.css
+  - sessions/SessionDetail.module.css
+/lib
+  - api.js
+/styles
+  - globals.css
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+# Component Overview:
+Navbar: Displays navigation links for homepage, sessions and goals pages. Has a hover effect color change (matched with the titles of the pages) and underline when hovered over.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Footer: A simple footer component displayed at the bottom of the page with black text (for readability) with ownership text.
 
-## Learn More
+## SessionCard
+Displays the details of an individual session, including:
+- **Subject**
+- **Duration**
+- **Notes**
 
-To learn more about Next.js, take a look at the following resources:
+### Features:
+- A **"Select"** button that toggles the card’s highlight color. When selected, the label changes to **"Deselect"**.
+- Below the card are three buttons:
+  - **"View Session"**: Navigates to the dynamic route page to view the full session.
+  - **"Edit"**: Enables editing the session in the form above.
+  - **"Delete"**: Deletes the session from the list.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+## GoalCard
+Displays the details of an individual goal, including:
+- **Target Date**
+- **Goal Title**
+- **Goal Description**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Features:
+- A **"Select"** button that toggles the card’s highlight color. When selected, the label changes to **"Deselect"**.
+- Below the card are three buttons:
+  - **"View Goal"**: Navigates to the dynamic route page to view the full goal.
+  - **"Edit"**: Enables editing the goal using the form above.
+  - **"Delete"**: Deletes the goal from the list.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Routing Overview:
+/sessions: Displays all study sessions.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+/sessions/[id]: Displays details of a specific session (dynamic route).
+
+/goals: Displays all study goals.
+
+/goals/[id]: Displays details of a specific goal (dynamic route).
+
+# State Management:
+Sessions and Goals are stored in local state using React's useState.
+
+# CRUD Operations (placeholder for API or database):
+
+**Create:** New sessions and goals are added to the state via the `createSession` and `createGoal` functions.
+
+**Read:** Sessions and goals are fetched from the state and displayed dynamically.
+
+**Update:** Existing sessions and goals can be edited, updating the state with the `updateSessionById` and `updateGoalById` functions.
+
+**Delete:** Sessions and goals can be deleted, removing them from the state using `deleteSessionById` and `deleteGoalById`.
+
+
+# Styling:
+CSS Modules are used for scoped styling to avoid conflicts.
+
+Each page and component has dedicated styles to maintain separation and clear places.
+
+The app is responsive, with media queries to support various screen sizes.
+
+
+# How to Run the Application
+You can either clone the repository **OR** run it locally from the unzipped folder:
+
+## Option 1: Clone from GitHub
+
+Clone the repository:
+
+1. git clone https://github.com/konakhoroz/CPAN144-GroupProject.git
+
+2. Navigate to the project folder: cd cpan144-groupproject
+
+3. Install dependencies: npm install
+
+4. Run the development server: npm run dev
+
+5. Open your browser and go to: http://localhost:3000
+
+## Option 2: From the ZIP file (manual download)
+
+1. Unzip the project folder.
+
+2. Open a terminal and navigate to the folder: cd path/to/unzipped-folder (whatever name you gave it and its path)
+
+3. Install dependencies: npm install
+
+4. Run the development server: npm run dev
+
+5. Open your browser and go to: http://localhost:3000

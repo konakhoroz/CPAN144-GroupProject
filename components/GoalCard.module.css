@@ -1,0 +1,38 @@
+.goal-card {
+    background-color: #ffebf7; /* Very Light Pink */
+    border: 2px solid #f1c6c6;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  
+  .goal-card.selected {
+    background-color: #ffb3cc; /* Light Pink Highlight when selected */
+  }
+  
+  .goal-card h3 {
+    color: #7e2020; /* Dark Pink */
+  }
+  
+  .goal-card p {
+    color: #4a90e2; /* Blue */
+  }
+  
+  .goal-card button {
+    padding: 8px 15px;
+    background-color: #f1c6c6;
+    border: 1px solid #f1c6c6;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .goal-card button:hover {
+    background-color: #7e2020;
+    color: white;
+  }
+  
+  .goal-card button:focus {
+    outline: 2px solid #7e2020;  /* Highlight the button when focused */
+  }
+  
