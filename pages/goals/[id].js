@@ -1,9 +1,16 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
-import { fetchGoalById } from '../../lib/api';
-import styles from './GoalDetail.module.css'; // Import the updated CSS module
+import dynamic from 'next/dynamic';
+
+const Navbar = dynamic(() => import('../../components/Navbar'), {
+  loading: () => <p>Loading Navbar...</p>,
+});
+
+const Footer = dynamic(() => import('../../components/Footer'), {
+  loading: () => <p>Loading Footer...</p>,
+});
+
+import styles from './GoalDetail.module.css'; // Keep this as is
 
 export default function GoalDetail() {
   const router = useRouter();
@@ -13,7 +20,14 @@ export default function GoalDetail() {
 
   useEffect(() => {
     if (id) {
-      fetchGoalById(id).then(setGoal);
+      const fetchGoal = async () => {
+        const response = await fetch(`/api/goals?id=${id}`);
+        if (response.ok) {
+          const data = await response.json();
+          setGoal(data);
+        }
+      };
+      fetchGoal();
     }
   }, [id]);
 
@@ -22,12 +36,16 @@ export default function GoalDetail() {
   return (
     <div>
       <Navbar />
-      
+
       <div className={styles.detailsContainer}>
-      <h2 className={styles.goalTitle}>{goal.title}</h2>
-        <p><strong>Target Date:</strong> <span className={styles.targetDate}>{goal.targetDate}</span> </p>
+        <h2 className={styles.goalTitle}>{goal.title}</h2>
+        <p>
+          <strong>Target Date:</strong>{' '}
+          <span className={styles.targetDate}>{goal.targetDate}</span>
+        </p>
         <p className={styles.goalDescription}>{goal.description}</p>
       </div>
+
       <Footer />
     </div>
   );

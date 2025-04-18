@@ -1,121 +1,136 @@
+/* General body styling */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f3ade6; 
-  margin: 0;
-  padding: 0;
-  color: #2d2d2d; 
+  font-family: Arial, sans-serif; /* Set a sans-serif font */
+  background-color: #f3ade6; /* Light pink background color */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  color: #2d2d2d; /* Dark gray text color */
 }
 
+/* Styling for headings h1 and h2 */
 h1, h2 {
-  color: #7e2020; 
-  text-align: center; 
-  margin-top: 50px; 
+  color: #7e2020; /* Dark red color for headings */
+  text-align: center; /* Center align the text */
+  margin-top: 50px; /* Add space above headings */
 }
 
+/* Styling for paragraph text */
 p {
-  color: #2d2d2d; 
+  color: #2d2d2d; /* Dark gray color for paragraph text */
 }
 
+/* Styling for the navigation menu */
 nav ul {
-  list-style-type: none;
-  padding: 0;
-  background-color: #ffc1ff; 
-  text-align: center;
-  margin: 0;
+  list-style-type: none; /* Remove default list style */
+  padding: 0; /* Remove padding */
+  background-color: #ffc1ff; /* Light pink background color */
+  text-align: center; /* Center align the items */
+  margin: 0; /* Remove margin */
 }
 
+/* Styling for each list item in the navigation menu */
 nav ul li {
-  display: inline;
-  margin-right: 20px;
+  display: inline; /* Make the list items appear inline */
+  margin-right: 20px; /* Add spacing between items */
 }
 
+/* Styling for links in the navigation menu */
 nav ul li a {
-  text-decoration: none;
-  color: #4a90e2; 
-  font-weight: bold;
-  padding: 10px;
+  text-decoration: none; /* Remove underline from links */
+  color: #4a90e2; /* Blue color for links */
+  font-weight: bold; /* Bold text for links */
+  padding: 10px; /* Add padding inside links */
 }
 
+/* Hover effect for links in the navigation menu */
 nav ul li a:hover {
-  color: #661c1c; 
-  text-decoration: underline;
+  color: #661c1c; /* Dark red color on hover */
+  text-decoration: underline; /* Underline the link on hover */
 }
 
+/* Styling for the footer section */
 footer {
-  background-color: #ffc1ff; 
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  font-size: 14px;
+  background-color: #ffc1ff; /* Light pink background */
+  color: white; /* White text color */
+  text-align: center; /* Center align text */
+  padding: 15px 0; /* Vertical padding for footer */
+  position: fixed; /* Fix the footer at the bottom of the page */
+  bottom: 0; /* Align footer to the bottom */
+  width: 100%; /* Make the footer span the full width */
+  font-size: 14px; /* Smaller font size for footer text */
 }
 
+/* Main content styling */
 main {
-  padding: 20px;
-  text-align: center;
+  padding: 20px; /* Padding for the main content area */
+  text-align: center; /* Center align the content */
 }
 
+/* Form input and textarea styling */
 form input, form textarea {
-  display: block;
-  margin: 10px auto;
-  padding: 12px;
-  width: 100%;
-  max-width: 300px;
-  border: 2px solid #f1c6c6; 
-  border-radius: 5px;
-  font-size: 16px;
+  display: block; /* Make form fields block-level elements */
+  margin: 10px auto; /* Center form fields horizontally and add vertical margin */
+  padding: 12px; /* Add padding inside form fields */
+  width: 100%; /* Make the input fields span the full width */
+  max-width: 300px; /* Limit the maximum width */
+  border: 2px solid #f1c6c6; /* Light pink border */
+  border-radius: 5px; /* Rounded corners for the form fields */
+  font-size: 16px; /* Set font size */
 }
 
+/* Styling for form buttons */
 form button {
-  padding: 12px 25px;
-  background-color: #a962bb; 
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 16px;
-  margin-top: 20px; 
+  padding: 12px 25px; /* Add padding inside the button */
+  background-color: #a962bb; /* Light purple background color */
+  color: white; /* White text color */
+  border: none; /* Remove border */
+  cursor: pointer; /* Show pointer cursor on hover */
+  border-radius: 5px; /* Rounded corners for the button */
+  font-size: 16px; /* Set font size */
+  margin-top: 20px; /* Add space above the button */
 }
 
+/* Hover effect for form buttons */
 form button:hover {
-  background-color: #4a90e2; 
-  color: white;
+  background-color: #4a90e2; /* Blue background on hover */
+  color: white; /* Ensure text stays white */
 }
 
-
+/* Additional margin for h2 */
 h2 {
-  text-align: center; 
-  margin-top: 40px; 
+  text-align: center; /* Center align the heading */
+  margin-top: 40px; /* Add space above the h2 */
 }
 
+/* Button styling */
 button {
-  display: block;
-  margin: 20px auto; 
+  display: block; /* Make the button block-level */
+  margin: 20px auto; /* Center align the button horizontally */
 }
 
-/* Responsive Design For Mobile */
+/* Responsive Design for Mobile (max-width: 600px) */
 @media (max-width: 600px) {
   nav ul {
-    text-align: center;
+    text-align: center; /* Center align navigation on mobile */
   }
 
+  /* Adjust form fields to take up 90% of width on mobile */
   form input, form textarea {
     width: 90%;
     max-width: 100%;
   }
 
+  /* Adjust button to take up 90% of width on mobile */
   form button {
     width: 90%;
     max-width: 100%;
   }
 }
-/* Responsive Layout for Mobile */
+
+/* Responsive Layout for Mobile (max-width: 768px) */
 @media (max-width: 768px) {
   .session-card, .goal-card {
-    padding: 10px;
-    margin: 5px;
+    padding: 10px; /* Add padding to session and goal cards */
+    margin: 5px; /* Add margin between cards */
   }
 }
-

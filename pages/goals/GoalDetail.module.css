@@ -1,27 +1,30 @@
 /* GoalDetail.module.css */
+
+/* Container for all goal details */
 .detailsContainer {
-    padding: 5px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 50px;
-  }
-  
-  .goalTitle {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 2px;
-    background: none; /* No background around the title */
-    padding: 10px;
-  }
-  
-  .targetDate {
-    font-size: 1.2em;
-    color: #007bff; /* Black color for content */
-    font-size: 1.2em;
-  }
-  
-  .targetDate {
-    margin-bottom: 10px;
-  }
-  
+  padding: 5px; /* Space inside the container */
+  background-color: #ffffff; /* White background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation effect */
+  margin-top: 50px; /* Space above the container */
+}
+
+/* Style for the goal title */
+.goalTitle {
+  font-size: 1.5em; /* Larger text size */
+  font-weight: bold; /* Make text bold */
+  margin-bottom: 2px; /* Space below the title */
+  background: none; /* No background behind the title */
+  padding: 10px; /* Space inside the title element */
+}
+
+/* Style for the goal's target date */
+.targetDate {
+  font-size: 1.2em; /* Slightly larger text */
+  color: #007bff; /* Blue color (Bootstrap primary blue) */
+}
+
+/* Additional spacing under the target date */
+.targetDate {
+  margin-bottom: 10px; /* Space below the date */
+}

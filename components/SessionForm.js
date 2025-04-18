@@ -1,4 +1,3 @@
-// components/SessionForm.js
 import { useState } from 'react';
 
 export default function SessionForm({ onAdd }) {

@@ -1,38 +1,37 @@
 .goal-card {
-    background-color: #ffebf7; /* Very Light Pink */
-    border: 2px solid #f1c6c6;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px 0;
-    cursor: pointer;
-  }
-  
-  .goal-card.selected {
-    background-color: #ffb3cc; /* Light Pink Highlight when selected */
-  }
-  
-  .goal-card h3 {
-    color: #7e2020; /* Dark Pink */
-  }
-  
-  .goal-card p {
-    color: #4a90e2; /* Blue */
-  }
-  
-  .goal-card button {
-    padding: 8px 15px;
-    background-color: #f1c6c6;
-    border: 1px solid #f1c6c6;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .goal-card button:hover {
-    background-color: #7e2020;
-    color: white;
-  }
-  
-  .goal-card button:focus {
-    outline: 2px solid #7e2020;  /* Highlight the button when focused */
-  }
-  
+  background-color: #ffebf7; /* Very Light Pink for the card background */
+  border: 2px solid #f1c6c6; /* Light border around the card */
+  border-radius: 10px; /* Rounded corners for the card */
+  padding: 15px; /* Padding inside the card */
+  margin: 10px 0; /* Vertical margin for spacing between cards */
+  cursor: pointer; /* Shows a pointer cursor to indicate it's clickable */
+}
+
+.goal-card.selected {
+  background-color: #ffb3cc; /* Light Pink Highlight when card is selected */
+}
+
+.goal-card h3 {
+  color: #7e2020; /* Dark Pink color for the goal title */
+}
+
+.goal-card p {
+  color: #4a90e2; /* Blue color for the goal description and target date */
+}
+
+.goal-card button {
+  padding: 8px 15px; /* Button padding for size */
+  background-color: #f1c6c6; /* Light pink button background */
+  border: 1px solid #f1c6c6; /* Light pink border around the button */
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Pointer cursor on hover to show it's clickable */
+}
+
+.goal-card button:hover {
+  background-color: #7e2020; /* Darker pink when hovering */
+  color: white; /* Text color changes to white when hovered */
+}
+
+.goal-card button:focus {
+  outline: 2px solid #7e2020;  /* Outline for accessibility when the button is focused */
+}

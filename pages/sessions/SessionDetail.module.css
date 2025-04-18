@@ -1,31 +1,43 @@
-/* SessionDetail.module.css */
+/* 
+  Container for the entire session detail section.
+  Adds padding and a light background with rounded corners and shadow
+  to visually separate the detail block from the rest of the page.
+*/
 .detailsContainer {
-    padding: 5px;
-    background-color: #f1f1f1;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 50px;
-  }
+  padding: 5px; /* Space inside the container */
+  background-color: #f1f1f1; /* Light gray background */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+  margin-top: 50px; /* Adds space above the container */
+}
 
-  .sessionTitle {
-    
-        font-size: 1.5em;
-        font-weight: bold;
-        margin-bottom: 2px;
-        background: none; /* No background around the title */
-        padding: 10px;
-    
+/* 
+  Styling for the session title.
+  Enlarges and bolds the text to make it prominent and readable.
+*/
+.sessionTitle {
+  font-size: 1.5em; /* Slightly larger than normal text */
+  font-weight: bold; /* Emphasizes the title */
+  margin-bottom: 2px; /* Small space below the title */
+  background: none; /* Ensures no background interferes with the layout */
+  padding: 10px; /* Adds space around the title text */
+}
 
-  }
-  
-  .duration {
-    font-weight: bold;
-    color: #007bff; /* Blue color for emphasis */
-    font-size: 1.2em;
-  }
-  
-  .notes {
-    font-size: 1.1em;
-    color: #000000; /* Black color for notes */
-  }
-  
+/* 
+  Styling for the session duration text.
+  Uses bold blue text to visually distinguish the duration from other details.
+*/
+.duration {
+  font-weight: bold; /* Makes the duration stand out */
+  color: #007bff; /* Bootstrap-like blue for visual consistency */
+  font-size: 1.2em; /* Slightly larger to highlight its importance */
+}
+
+/* 
+  Styling for the session notes text.
+  Keeps it clean and readable with a slightly increased font size.
+*/
+.notes {
+  font-size: 1.1em; /* Enhances readability */
+  color: #000000; /* Uses solid black for clarity and contrast */
+}
