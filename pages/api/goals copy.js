@@ -1,3 +1,6 @@
+//Same thing this one like sessions.js
+
+
 let goals = []; // In-memory storage for goals
 
 const generateId = () => Date.now().toString(); // Helper function to generate unique IDs
