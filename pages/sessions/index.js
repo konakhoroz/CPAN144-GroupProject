@@ -49,22 +49,37 @@ export default function Sessions() {
     }
   };
 
-  // Handle adding a new session
   const handleAddSession = async (e) => {
     e.preventDefault();
+  
+    // Ensure the input fields are not empty
     if (newSession.subject && newSession.duration && newSession.notes) {
-      await fetch('/api/sessions', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(newSession), // Send new session data
-      });
-      // Fetch updated sessions list
-      const response = await fetch('/api/sessions');
-      const data = await response.json();
-      setSessions(data); // Update session list
-      setNewSession({ subject: '', duration: '', notes: '' }); // Clear form
+      try {
+        // Send POST request to add a new session
+        const postResponse = await fetch('/api/sessions', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(newSession),
+        });
+  
+        if (postResponse.ok) {
+          // Fetch updated list of sessions only if the POST request was successful
+          const response = await fetch('/api/sessions');
+          const data = await response.json();
+  
+          // Update the session list and clear form
+          setSessions(data);
+          setNewSession({ subject: '', duration: '', notes: '' }); // Clear form
+        } else {
+          // Handle errors from the POST request
+          console.error('Failed to add session');
+        }
+      } catch (error) {
+        console.error('Error occurred while adding session:', error);
+      }
     }
   };
+  
 
   // Handle deleting a session
   const handleDelete = async (id) => {
